@@ -10,7 +10,11 @@
     @include md-min {
       grid-template-columns: repeat(3, 1fr);
     }
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
+
   .form-item {
     &:nth-child(1) {
       @include md-sm {
@@ -19,6 +23,7 @@
       }
     }
     &__input {
+      display: block;
       font-size: 1.125rem;
       width: 100%;
       height: 60px;
@@ -31,11 +36,21 @@
       border-bottom-color: rgba(255, 255, 255, 0.25);
       background-color: rgba(255, 255, 255, 0.05);
       overflow: visible;
+      outline: none;
     }
     &__input:hover,
     &__input:focus {
-      border: 2px solid $color-gray;
+      border-color: rgba(255, 255, 255, 0.1) ;
       border-bottom-color: $color-light;
+      background-color:(255, 255, 255, 0.1) ;
+    }
+    &__input::placeholder{
+      color:$color-light;
+      opacity: 0.2;
+    }
+    &__input:hover::placeholder{
+      color:$color-light ;
+      opacity: 0.4;
     }
   }
   .btn--primary {
@@ -50,6 +65,7 @@
   }
   .btn--primary:hover,
   .btn--primary:focus {
+    cursor: pointer;
     border-color: $color-light;
     background-color: $color-accent;
   }
