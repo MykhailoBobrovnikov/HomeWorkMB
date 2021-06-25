@@ -1,0 +1,56 @@
+.form {
+  padding: 30px 0;
+  background-color: $color-primary;
+
+  &__container {
+    display: grid;
+    @extend %container;
+    gap: $gap;
+
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .form-item {
+    &:nth-child(1) {
+      @include md-sm {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+      }
+    }
+    &__input {
+      font-size: 1.125rem;
+      width: 100%;
+      height: 60px;
+      padding-right: 30px;
+      padding-left: 30px;
+      transition: background-color 0.5s, border-color 0.5s;
+      letter-spacing: 0.15em;
+      color: $color-light;
+      border: 2px solid rgba(255, 255, 255, 0);
+      border-bottom-color: rgba(255, 255, 255, 0.25);
+      background-color: rgba(255, 255, 255, 0.05);
+      overflow: visible;
+    }
+    &__input:hover,
+    &__input:focus {
+      border: 2px solid $color-gray;
+      border-bottom-color: $color-light;
+    }
+  }
+  .btn--primary {
+    overflow: visible;
+    width: 100%;
+    color: $color-light;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .btn--primary:hover,
+  .btn--primary:focus {
+    border-color: $color-light;
+    background-color: $color-accent;
+  }
+}

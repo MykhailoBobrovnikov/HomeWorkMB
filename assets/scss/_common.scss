@@ -1,0 +1,114 @@
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  font-family: $font-main;
+  font-size: $font-size;
+  line-height: 1.15;
+  overflow-y: scroll;
+  letter-spacing: 0.1em;
+  color: $color-gray;
+}
+body {
+  margin: 0;
+}
+h1 {
+  font-family: $font-header;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.08em;
+  @media (min-width: $lg) {
+    font-size: 3.75rem;
+  }
+  @media (max-width: $lg - 0.2) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: $md) {
+    font-size: 1.875rem;
+  }
+}
+h2 {
+  font-family: "Roboto Slab", serif;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  color: #2d3651;
+}
+h3 {
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  color: #637588;
+}
+.about,
+.posts {
+  @include lg-min {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include lg-md {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include md-sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+a {
+  text-decoration: none;
+  color: $color-light;
+}
+p {
+  color: #637588;
+}
+img {
+  border-style: none;
+}
+.btn {
+  font-size: 1.125rem;
+  display: flex;
+  transition: 0.5s;
+  letter-spacing: 0.1em;
+  align-items: center;
+  justify-content: center;
+}
+.btn--light {
+  border: 2px solid $color-light;
+  background-color: rgba($color-light, 0.1);
+  @include lg-min {
+    font-size: 1.125 rem;
+    width: 250px;
+    height: 60px;
+  }
+  @include lg-md {
+    width: 200px;
+    height: 50px;
+  }
+  @include md {
+    width: 170px;
+    height: 40px;
+  }
+}
+.btn--primary {
+  font-size: 1.125rem;
+  height: 60px;
+  border: 2px solid;
+  border-color: $color-primary;
+  background-color: rgba($color-primary, 0.8);
+  @include sm-min {
+    width: 350px;
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+.btn:hover,
+.btn:focus {
+  background-color: $color-accent;
+}

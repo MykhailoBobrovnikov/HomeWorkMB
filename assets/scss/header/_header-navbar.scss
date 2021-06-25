@@ -1,0 +1,115 @@
+.header-navbar {
+  display: grid;
+  letter-spacing: 0.1em;
+  align-items: center;
+  justify-items: end;
+
+  &__btn {
+    position: relative;
+    width: 30px;
+    height: 22.5px;
+    margin: 25px 0 25px auto;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+
+    @include md-min {
+      display: none;
+    }
+
+    &-row {
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 4.5px;
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+      opacity: 1;
+      border-radius: 9px;
+      background: $color-light;
+
+      &:nth-child(1) {
+        top: 18px;
+      }
+
+      &:nth-child(2) {
+        top: 27px;
+      }
+
+      &:nth-child(3) {
+        top: 36px;
+      }
+    }
+
+    &--active span {
+      &:nth-child(1) {
+        top: 9px;
+
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        left: -30px;
+
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 9px;
+
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__item {
+    margin: 0 0 0 $gap;
+    @include md-min {
+      margin: $gap / 2;
+    }
+    @include md {
+      margin: $gap ($gap / 2);
+    }
+  }
+
+  &__list {
+    @include unlist(56px -20px 18px 0);
+    @include md-min {
+      font-size: 1.15rem;
+
+      display: flex;
+
+      justify-content: flex-end;
+    }
+    @include md {
+      display: none;
+      &--active {
+        position: absolute;
+        top: 100%;
+        right: $gap * 2;
+
+        display: block;
+
+        text-align: right;
+
+        background-color: rgba($color-gray-dark, 0.8);
+      }
+    }
+  }
+  &__link {
+    font-size: 1.125rem;
+    display: block;
+    @include md-min {
+      padding: $gap / 2;
+    }
+    @include md {
+      padding: ($gap / 2) $gap;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+}

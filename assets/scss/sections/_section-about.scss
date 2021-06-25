@@ -1,0 +1,92 @@
+.about {
+  letter-spacing: 0.055em;
+  background-color: $color-gray-light;
+
+  h2 {
+    margin-top: 0;
+    @include lg-min {
+      font-size: 2.5rem;
+      margin-bottom: 56px;
+    }
+    @include lg-md {
+      font-size: 2rem;
+      margin-bottom: 42px;
+    }
+    @include md-sm {
+      font-size: 1.5rem;
+      margin-bottom: 36px;
+    }
+    @include sm {
+      font-size: 1.5rem;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+  }
+  p {
+    @include lg-min {
+      font-size: 1.125rem;
+    }
+  }
+  &__container {
+    display: grid;
+    @extend %container;
+    @include lg-min {
+      gap: 100px;
+      grid-template-columns: 1fr 271px;
+    }
+    @include lg-md {
+      gap: 40px;
+      grid-template-columns: 1fr 271px;
+    }
+    @include md-sm {
+      gap: 20px;
+      grid-template-columns: 1fr 236px;
+    }
+    .about__content {
+      @include lg-min {
+        right: -50px;
+        p:first-of-type::after {
+          @include after-line;
+          right: -50px;
+        }
+      }
+      @include lg-md {
+        right: -20px;
+        p:first-of-type::after {
+          @include after-line;
+          right: -20px;
+        }
+      }
+      @include md-sm {
+        right: -10px;
+        p:first-of-type::after {
+          @include after-line;
+          right: -10px;
+        }
+      }
+     
+      p:first-of-type {
+        position: relative;
+        margin-top: -5px;
+      }
+      p:last-of-type::after {
+        margin: 0;
+      }
+    }
+  }
+  &__image {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    border-style: none;
+    & img {
+      max-width: 100%;
+      min-height: 480px;
+
+      @include md {
+        min-height: auto;
+        
+      }
+    }
+  }
+}
