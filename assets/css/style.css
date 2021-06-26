@@ -459,6 +459,10 @@ img {
       align-content: center;
 }
 
+h6 {
+  display: none;
+}
+
 .header-overlay {
   opacity: 0.8;
   background-color: #2d3651;
@@ -778,6 +782,10 @@ img {
   background-color: #2d3651;
 }
 
+.form h3 {
+  display: none;
+}
+
 .form__container {
   display: grid;
   gap: 20px;
@@ -805,7 +813,7 @@ img {
 .form .form-item__input:hover, .form .form-item__input:focus {
   border-color: rgba(255, 255, 255, 0.1);
   border-bottom-color: #fff;
-  background-color: 255, 255, 255, 0.1;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .form .form-item__input::-webkit-input-placeholder {
@@ -1101,7 +1109,7 @@ img {
     padding: 10px;
   }
   .skill-item__title {
-    font: size 1.25rem;
+    font-size: 1.25rem;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1118,7 +1126,7 @@ img {
     padding-bottom: 100px;
   }
   .btn--light {
-    font-size: 1.125 rem;
+    font-size: 1.125rem;
     width: 250px;
     height: 60px;
   }
@@ -1246,7 +1254,7 @@ img {
     margin: 0 0 33px;
   }
   .skill-item__title {
-    font: size 1.125rem;
+    font-size: 1.125rem;
   }
   .about__image img {
     min-height: auto;

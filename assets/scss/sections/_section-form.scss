@@ -2,6 +2,9 @@
   padding: 30px 0;
   background-color: $color-primary;
 
+  h3 {
+    display: none;
+  }
   &__container {
     display: grid;
     @extend %container;
@@ -14,7 +17,6 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-
   .form-item {
     &:nth-child(1) {
       @include md-sm {
@@ -42,7 +44,7 @@
     &__input:focus {
       border-color: rgba(255, 255, 255, 0.1) ;
       border-bottom-color: $color-light;
-      background-color:(255, 255, 255, 0.1) ;
+      background-color:rgba(255, 255, 255, 0.1) ;
     }
     &__input::placeholder{
       color:$color-light;
