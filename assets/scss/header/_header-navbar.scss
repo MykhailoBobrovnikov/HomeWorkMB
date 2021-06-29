@@ -77,20 +77,16 @@
     @include unlist(54px -20px 18px 0);
     @include md-min {
       font-size: 1.15rem;
-
       display: flex;
-
       justify-content: flex-end;
     }
     @include md {
       display: none;
       &--active {
         position: absolute;
-        top: 100%;
-        right: $gap * 2;
-
+        top: 60%;
+        right: 30px;
         display: block;
-
         text-align: right;
 
         background-color: rgba($color-gray-dark, 0.8);

@@ -1239,8 +1239,8 @@ h6 {
   }
   .header-navbar__list--active {
     position: absolute;
-    top: 100%;
-    right: 40px;
+    top: 60%;
+    right: 30px;
     display: block;
     text-align: right;
     background-color: rgba(68, 89, 110, 0.8);
