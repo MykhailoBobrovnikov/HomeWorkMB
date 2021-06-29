@@ -22,11 +22,11 @@
       left: 0;
       display: block;
       width: 100%;
-      height: 4.5px;
+      height: 3px;
       transition: 0.25s ease-in-out;
       transform: rotate(0deg);
       opacity: 1;
-      border-radius: 9px;
+      border-radius: 3px;
       background: $color-light;
 
       &:nth-child(1) {
@@ -44,7 +44,7 @@
 
     &--active span {
       &:nth-child(1) {
-        top: 9px;
+        top: 27px;
 
         transform: rotate(135deg);
       }
@@ -56,7 +56,7 @@
       }
 
       &:nth-child(3) {
-        top: 9px;
+        top: 27px;
 
         transform: rotate(-135deg);
       }
@@ -74,7 +74,7 @@
   }
 
   &__list {
-    @include unlist(56px -20px 18px 0);
+    @include unlist(54px -20px 18px 0);
     @include md-min {
       font-size: 1.15rem;
 

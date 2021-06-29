@@ -20,10 +20,11 @@ h1 {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.08em;
+
   @media (min-width: $lg) {
     font-size: 3.75rem;
   }
-  @media (max-width: $lg - 0.2) {
+  @media (max-width: $lg - 0.2) and (max-width:$md){
     font-size: 2.5rem;
   }
   @media (max-width: $md) {
@@ -89,10 +90,19 @@ img {
   @include lg-md {
     width: 200px;
     height: 50px;
+    font-size: 1rem;
   }
-  @include md {
+  @include  md-sm {
     width: 170px;
     height: 40px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+  }
+  @include sm {
+    width: 170px;
+    height: 40px;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
   }
 }
 .btn--primary {
@@ -107,6 +117,7 @@ img {
   @include sm {
     width: 100%;
   }
+  
 }
 .btn:hover,
 .btn:focus {

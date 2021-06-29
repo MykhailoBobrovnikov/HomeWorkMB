@@ -3,6 +3,8 @@
   z-index: 1;
   &__container {
     @extend %container;
+
+    
   }
   &__title {
     @include lg-min {

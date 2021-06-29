@@ -11,6 +11,22 @@
       font-size: 2.5rem;
       margin-bottom: 56px;
     }
+    @include lg-md {
+      margin-bottom: 42px;
+      font-size: 2rem;
+    }
+    @include md-sm {
+      margin-bottom: 36px;
+      font-size: 1.5rem;
+    }
+    @include sm {
+      margin-bottom: 36px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+
+
   }
 
   &__container {
